@@ -75,7 +75,7 @@ contract NFTStaking is ERC721Holder, Ownable, events {
      * Emits an {UnStaked} event.
      */
     function unstake(uint256 _assetPID, uint256 _tokenID) external {
-        <!-- Recieved the asset PID and the _tokenID check if asset has been liquidated first,
+        <!-- Recieved the asset PID and the _tokenID,
         get the length of token that the user staked and loop thorugh to check if user staked
         the token id he wants to withdraw if user own it `iOwnedTheTokenID` will be set to true
         otherwise set to false which shows user doesnt own the tokenID or does not stake the tokenID,
@@ -127,14 +127,6 @@ contract NFTStaking is ERC721Holder, Ownable, events {
         <!-- user infor in each pool 
          return the struct called `Stake`-->
     }
-
-    /**
-     * @dev Returns the true if an asset has been liquidated.
-     * 
-     * - The `_asset` is the assest (NFT address) liquidated ?.
-     *
-     */
-    function isAssetLiquidated(address _asset) external view returns (bool);
 
     /**
      * @dev get information related to a a pool. view functions
