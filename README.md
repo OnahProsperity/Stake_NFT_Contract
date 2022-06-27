@@ -4,7 +4,7 @@ In this contract, the user is staking NFT
 The NFT addresses required to be staked is set by the owner.
 
 
-# Functions in the staking contract and their use case
+# FUnction InterFace
 
 ```solidity
 pragma solidity 0.8.7;
